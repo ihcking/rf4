@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>九梦 - 江湖如梦，侠影留心！</title>
+    <title>俄罗斯钓鱼4 - 钓鱼爱好者的天堂！</title>
     <!-- 网站描述 -->
-    <meta name="description" content="燕云十六声，九梦，休闲养老百业，欢迎大家！请随意，平时不会打扰，社恐玩家福利！">
+    <meta name="description" content="俄罗斯钓鱼4，最真实的钓鱼模拟游戏，探索世界各地的钓鱼胜地，体验钓鱼的乐趣和挑战。">
     <!-- 网站关键词 -->
-    <meta name="keywords" content="燕云十六声，游戏，手游，端游，页游，九梦，百业，攻略">
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="keywords" content="俄罗斯钓鱼4, 钓鱼模拟, 休闲游戏, 钓鱼攻略, 钓鱼社区, 钓鱼技巧">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* 全局样式 */
         * {
@@ -20,9 +20,9 @@
         }
 
         :root {
-            --primary-color: #8e2de2; /* 紫色 */
-            --secondary-color: #4a00e0; /* 深紫色 */
-            --accent-color: #e94057; /* 红色 */
+            --primary-color: #2ecc71; /* 绿色 */
+            --secondary-color: #27ae60; /* 深绿色 */
+            --accent-color: #3498db; /* 蓝色 */
             --dark-color: #1a1a2e;
             --light-color: #f8f9fa;
             --gradient-bg: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -60,12 +60,12 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(142, 45, 226, 0.4);
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
         }
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(142, 45, 226, 0.6);
+            box-shadow: 0 8px 20px rgba(46, 204, 113, 0.6);
         }
 
         /* 导航栏 */
@@ -152,7 +152,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/21_2468f2e.jpg?image_process=format,jpg') center/cover;
+            background: url('https://wallpaperaccess.com/full/478650.jpg') center/cover;
             opacity: 0.9;
             z-index: 0;
         }
@@ -258,14 +258,107 @@
             color: #555;
         }
 
-        /* 萌新指南 */
-        #newbie-guides {
+        /* 更新日志 */
+        .roadmap {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .roadmap-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .roadmap-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .roadmap-header {
+            background: var(--gradient-bg);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .roadmap-header h3 {
+            font-size: 22px;
+        }
+
+        .roadmap-content {
+            padding: 20px;
+        }
+
+        .roadmap-content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .roadmap-content ul {
+            list-style-position: inside;
+            color: #666;
+        }
+
+        .roadmap-content li {
+            margin-bottom: 8px;
+        }
+
+        /* 新手指南 */
+        .newbie-guides {
             padding: 100px 0;
             background-color: white;
         }
-        
-        #newbie-guides .about-content {
-            margin-bottom: 50px;
+
+        .newbie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .newbie-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .newbie-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .newbie-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .newbie-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .newbie-info {
+            padding: 20px;
+        }
+
+        .newbie-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .newbie-info p {
+            color: #666;
+            margin-bottom: 15px;
         }
 
         /* 最新动态 */
@@ -331,7 +424,7 @@
             margin-bottom: 15px;
         }
 
-        /* 游戏风采 */
+        /* 钓点分享 */
         .gallery {
             padding: 100px 0;
             background-color: white;
@@ -393,7 +486,7 @@
             transform: translateY(0);
         }
 
-        /* 攻略区 */
+        /* 钓鱼技巧 */
         .guides {
             padding: 100px 0;
             background-color: #f9f9f9;
@@ -479,19 +572,19 @@
             margin-bottom: 15px;
         }
 
-        /* 未来计划 */
-        .roadmap {
+        /* 社区交流 */
+        .community {
             padding: 100px 0;
-            background-color: #f9f9f9;
+            background-color: white;
         }
 
-        .roadmap-grid {
+        .community-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .roadmap-card {
+        .community-card {
             background: white;
             border-radius: 10px;
             overflow: hidden;
@@ -499,37 +592,84 @@
             transition: transform 0.3s ease;
         }
 
-        .roadmap-card:hover {
+        .community-card:hover {
             transform: translateY(-10px);
         }
 
-        .roadmap-header {
-            background: var(--gradient-bg);
-            color: white;
+        .community-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .community-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .community-info {
             padding: 20px;
-            text-align: center;
         }
 
-        .roadmap-header h3 {
-            font-size: 22px;
+        .community-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
         }
 
-        .roadmap-content {
-            padding: 20px;
+        .community-info p {
+            color: #666;
+            margin-bottom: 15px;
         }
 
-        .roadmap-content p {
+        /* 下载中心 */
+        .download {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+
+        .download-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .download-text {
+            flex: 1;
+        }
+
+        .download-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .download-text p {
             margin-bottom: 15px;
             color: #555;
         }
 
-        .roadmap-content ul {
-            list-style-position: inside;
-            color: #666;
+        .download-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .roadmap-content li {
-            margin-bottom: 8px;
+        .download-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .download-image:hover img {
+            transform: scale(1.05);
         }
 
         /* 页脚 */
@@ -693,16 +833,18 @@
             <nav>
                 <div class="logo">
                     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQxIDAtOC0zLjU5LTgtOHMzLjU5LTggOC04IDggMy41OSA4IDgtMy41OSA4LTggMy41OSA4LTggOHptMy41LTljLjgzIDAgMS41LS42NyAxLjUtMS41UzE2LjMzIDggMTUuNSA4IDE0IDguNjcgMTQgOC41IDE0LjUgOSAxNS41IDkgNVMyLjUgMS41IDEuNSAxLjV6Ii8+PC9zdmc+" alt="Logo">
-                    <h1>九梦</h1>
+                    <h1>俄罗斯钓鱼4</h1>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">首页</a></li>
-                    <li><a href="#about">百业介绍</a></li>
-                    <li><a href="#roadmap">百业公告</a></li>
-                    <li><a href="#newbie-guides">萌新指南</a></li>
-                    <li><a href="#news">百业动态</a></li>
-                    <li><a href="#gallery">百业风采</a></li>
-                    <li><a href="#guides">游戏攻略</a></li>
+                    <li><a href="#about">游戏介绍</a></li>
+                    <li><a href="#roadmap">更新日志</a></li>
+                    <li><a href="#newbie-guides">新手指南</a></li>
+                    <li><a href="#news">钓鱼资讯</a></li>
+                    <li><a href="#gallery">钓点分享</a></li>
+                    <li><a href="#guides">钓鱼技巧</a></li>
+                    <li><a href="#community">社区交流</a></li>
+                    <li><a href="#download">下载中心</a></li>
                     <li><a href="#contact">联系我们</a></li>
                 </ul>
             </nav>
@@ -713,10 +855,10 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2 class="fade-in">九梦 - 江湖如梦，侠影留心！</h2>
-                <p class="fade-in delay-1">致力于为江湖侠客们打造一片轻松惬意的休闲天地！</p>
+                <h2 class="fade-in">俄罗斯钓鱼4 - 钓鱼爱好者的天堂！</h2>
+                <p class="fade-in delay-1">体验最真实的钓鱼模拟游戏，探索世界各地的钓鱼胜地，与全球钓鱼爱好者分享钓鱼乐趣。</p>
                 <div class="hero-buttons fade-in delay-2">
-                    <a href="https://www.yysls.cn" target="_blank" class="btn">游戏下载</a>
+                    <a href="#" target="_blank" class="btn">立即下载</a>
                     <a href="#about" class="btn btn-secondary">了解更多</a>
                 </div>
             </div>
@@ -727,65 +869,72 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-title">
-                <h2>百业介绍</h2>
+                <h2>游戏介绍</h2>
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/8_558102f.jpg?image_process=format,jpg" alt="游戏介绍">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="游戏介绍">
                 </div>
                 <div class="about-text">
-                    <h3>九梦</h3>
-					<p>No.10472795</p>
-                    <p>致力于为江湖侠客们打造一片轻松惬意的休闲天地，在刀光剑影与快意恩仇之余，能够沉浸于九梦的闲适氛围中，忘却尘世纷扰，享受片刻宁静与欢愉，让心灵在诗意江湖中寻得一方柔美的栖息之所。</p>
-                    <p>步入江湖繁华处，且寻九梦闲适间。这里有茶香袅袅、幻境奇幻、身心舒缓，一起闯荡江湖的的侠友们，别再让疲倦伴随江湖路，来九梦，赴一场专属江湖人的悠闲之约！</p>
+                    <h3>俄罗斯钓鱼4</h3>
+                    <p>版本：v1.3.0</p>
+                    <p>俄罗斯钓鱼4是一款由俄罗斯游戏公司开发的休闲钓鱼模拟游戏，自2018年发布以来，凭借其真实的钓鱼体验、丰富的鱼类品种、精美的游戏画面和逼真的物理引擎，吸引了全球数百万钓鱼爱好者的关注。</p>
+                    <p>游戏中，玩家可以探索世界各地的钓鱼胜地，从宁静的湖泊到湍急的河流，从神秘的沼泽地到广阔的海洋，每一个场景都经过精心设计，带来身临其境的钓鱼体验。同时，游戏中还提供了丰富的装备选购，从入门级的鱼竿到专业的渔具，满足不同玩家的需求。</p>
+                    <p>无论您是钓鱼新手还是资深渔夫，俄罗斯钓鱼4都能为您提供无穷的乐趣和挑战。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 未来计划 -->
+    <!-- 更新日志 -->
     <section id="roadmap" class="roadmap">
         <div class="container">
             <div class="section-title">
-                <h2>百业公告</h2>
+                <h2>更新日志</h2>
             </div>
             <div class="roadmap-grid">
                 <div class="roadmap-card">
                     <div class="roadmap-header">
-                        <h3>新人须知</h3>
+                        <h3>1.3.0版本</h3>
                     </div>
                     <div class="roadmap-content">
-                        <p>休闲养老百业，欢迎大家！</p>
+                        <p>2023年10月15日发布</p>
                         <ul>
-                            <li>每周要做3次百业货运维护百业消耗！</li>
-                            <li>每周会群里组织五人/十人副本！</li>
-                            <li>如果没有周活跃会移除！</li>
+                            <li>新增亚洲钓鱼地图，包括中国、日本和韩国的经典钓点</li>
+                            <li>增加30种新鱼类，包括多种亚洲特有鱼类</li>
+                            <li>新增钓鱼教程系统，帮助新手快速上手</li>
+                            <li>优化游戏性能，修复部分已知bug</li>
+                            <li>新增鱼类百科功能，记录已捕获鱼类信息</li>
                         </ul>
                     </div>
                 </div>
                 <div class="roadmap-card">
                     <div class="roadmap-header">
-                        <h3>百业优势</h3>
+                        <h3>1.2.0版本</h3>
                     </div>
                     <div class="roadmap-content">
-                        <p>氛围温馨和谐，新人友好！</p>
+                        <p>2023年6月20日发布</p>
                         <ul>
-                            <li>平时不会打扰，社恐玩家福利！</li>
-                            <li>帮助新人成长，有问题可帮忙处理！</li>
-                            <li>每周会群里组织副本，帮助提升！</li>
+                            <li>新增欧洲钓鱼地图，包括多瑙河、莱茵河等著名水域</li>
+                            <li>增加15种新型鱼类，包括欧洲鳟鱼、鲤鱼等</li>
+                            <li>新增季节变化系统，不同季节鱼类行为和分布不同</li>
+                            <li>新增成就系统，完成特定任务获得成就和奖励</li>
+                            <li>优化天气系统，增加雨天、雪天等特殊天气效果</li>
                         </ul>
                     </div>
                 </div>
                 <div class="roadmap-card">
                     <div class="roadmap-header">
-                        <h3>百业活动</h3>
+                        <h3>1.1.0版本</h3>
                     </div>
                     <div class="roadmap-content">
-                        <p>同游玩更尽欢，栖息之地！</p>
+                        <p>2023年3月5日发布</p>
                         <ul>
-                            <li>每天 20:00，百业派对降准点开启！</li>
-                            <li>周二/周三 20:00，破军杀将桃战一决高下！</li>
-                            <li>周一/周五 20:00，当前版本副本快速提升！</li>
+                            <li>新增北美钓鱼地图，包括密歇根湖、五大湖等著名水域</li>
+                            <li>增加10种新型鱼类，包括鲈鱼、鲑鱼等</li>
+                            <li>新增鱼类习性系统，不同鱼类对饵料和环境的偏好不同</li>
+                            <li>优化物理引擎，钓鱼动作更加真实自然</li>
+                            <li>新增鱼类图鉴功能，记录已捕获鱼类信息</li>
                         </ul>
                     </div>
                 </div>
@@ -793,460 +942,383 @@
         </div>
     </section>
 
-    <!-- 萌新指南 -->
-    <section id="newbie-guides" class="about">
+    <!-- 新手指南 -->
+    <section id="newbie-guides" class="newbie-guides">
         <div class="container">
             <div class="section-title">
-                <h2>萌新指南</h2>
+                <h2>新手指南</h2>
             </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/8_558102f.jpg?image_process=format,jpg" alt="新人指南">
+            <div class="newbie-grid">
+                <div class="newbie-card">
+                    <div class="newbie-image">
+                        <img src="https://wallpaperaccess.com/full/478650.jpg" alt="新手指南1">
+                    </div>
+                    <div class="newbie-info">
+                        <h3>基本操作</h3>
+                        <p>了解游戏的基本操作方式，包括抛竿、收线、遛鱼等基本技巧。</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <h3>新人指南</h3>
-                    <p>欢迎来到燕云十六声！这里是为新侠客准备的入门指南。</p>
-                    <p>1. <strong>新手教程</strong>：完成新手教程可获得丰厚奖励，帮助你快速了解游戏基础操作。</p>
-                    <p>2. <strong>武学选择</strong>：根据个人喜好选择适合的武学，心法，奇术，装备搭配，每个武学都有独特的优势和玩法。</p>
-                    <p>3. <strong>游戏任务</strong>：完成游戏任务可获得经验、通宝和装备等奖励，助力快速成长。</p>
-                    <p>4. <strong>探索收集</strong>：每一个地图都需要抓蹊跷和开宝箱等其他玩法，不仅能获得丰厚奖励，还可以提升属性。</p>
+                <div class="newbie-card">
+                    <div class="newbie-image">
+                        <img src="https://wallpaperaccess.com/full/478650.jpg" alt="新手指南2">
+                    </div>
+                    <div class="newbie-info">
+                        <h3>装备选择</h3>
+                        <p>学习如何根据不同的钓鱼场景选择合适的装备，提高钓鱼成功率。</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="newbie-card">
+                    <div class="newbie-image">
+                        <img src="https://wallpaperaccess.com/full/478650.jpg" alt="新手指南3">
+                    </div>
+                    <div class="newbie-info">
+                        <h3>钓点选择</h3>
+                        <p>了解不同鱼类的栖息习性，学习如何选择合适的钓点。</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
                 </div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>进阶指南</h3>
-                    <p>掌握基础后，进阶指南将帮助你更深入地了解游戏。</p>
-                    <p>1. <strong>装备强化</strong>：通过装备调律提升装备属性，增强角色战斗力。</p>
-                    <p>2. <strong>心法搭配</strong>：根据不同流派和玩法选择合适的心法组合，发挥最大战斗效能。</p>
-                    <p>3. <strong>造诣进阶</strong>：学习高级武学，心法，奇术等级，提升战斗技巧和策略深度。</p>
-                    <p>4. <strong>天赋属性</strong>：通过任务和探索提高顿悟值，增加天赋点。</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/25_9773060.jpg?image_process=format,jpg" alt="进阶指南">
-                </div>
-            </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/8_558102f.jpg?image_process=format,jpg" alt="新人指南">
-                </div>
-                <div class="about-text">
-                    <h3>百业指南</h3>
-                    <p>欢迎来到九梦！这里是为新侠客准备的百业指南。</p>
-                    <p>1. <strong>新手教程</strong>：根据任务完成百业活动，帮助你快速了解百业玩法。</p>
-                    <p>2. <strong>战力辅助</strong>：通过百业活动获取货币，提升辅助属性和百业Buff。</p>
-                    <p>3. <strong>休闲活动</strong>：可以与大家一起玩小游戏，简单休闲，还能结交志同道合的朋友。</p>
-                    <p>4. <strong>副本活动</strong>：与队友协作挑战副本，获得丰厚奖励，快速提升战力。</p>
-                </div>
         </div>
     </section>
-	
+
     <!-- 最新动态 -->
     <section id="news" class="news">
         <div class="container">
             <div class="section-title">
-                <h2>百业动态</h2>
+                <h2>钓鱼资讯</h2>
             </div>
             <div class="news-grid">
                 <div class="news-card">
                     <div class="news-image">
-                        <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/11_ec9dda1.jpg?image_process=format,jpg" alt="动态1">
+                        <img src="https://wallpaperaccess.com/full/478650.jpg" alt="资讯1">
                     </div>
                     <div class="news-info">
-                        <span class="news-date">2024年5月31日</span>
-                        <h3>《燕云十六声》开启限量测试</h3>
-                        <p>参与仲吕测试，提前获取游戏内容玩法。</p>
+                        <span class="news-date">2023年10月15日</span>
+                        <h3>俄罗斯钓鱼4 v1.3.0版本更新内容</h3>
+                        <p>新增亚洲钓鱼地图，增加30种新鱼类，优化游戏性能。</p>
                     </div>
                 </div>
                 <div class="news-card">
                     <div class="news-image">
-                        <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/25_9773060.jpg?image_process=format,jpg" alt="动态2">
+                        <img src="https://wallpaperaccess.com/full/478650.jpg" alt="资讯2">
                     </div>
                     <div class="news-info">
-                        <span class="news-date">2025年5月10日</span>
-                        <h3>《九梦》正式创立</h3>
-                        <p>为大家提供一个温馨的栖息之所。</p>
+                        <span class="news-date">2023年9月20日</span>
+                        <h3>全球钓鱼比赛即将开启</h3>
+                        <p>第四届全球钓鱼比赛将于10月1日正式开始，丰厚奖金等你来拿。</p>
                     </div>
                 </div>
                 <div class="news-card">
                     <div class="news-image">
-                        <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/13_b3b83f1.jpg?image_process=format,jpg" alt="动态3">
+                        <img src="https://wallpaperaccess.com/full/478650.jpg" alt="资讯3">
                     </div>
                     <div class="news-info">
-                        <span class="news-date">2023年5月25日</span>
-                        <h3>《九梦》官网正式创立</h3>
-                        <p>为大家提供便捷常用的游戏攻略信息。</p>
+                        <span class="news-date">2023年8月5日</span>
+                        <h3>新增游戏内购买系统</h3>
+                        <p>游戏内新增购买系统，玩家可以购买高级装备和特殊鱼饵。</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 游戏风采 -->
+    <!-- 钓点分享 -->
     <section id="gallery" class="gallery">
         <div class="container">
             <div class="section-title">
-                <h2>百业风采</h2>
+                <h2>钓点分享</h2>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/24_29afdb5.jpg?image_process=format,jpg" alt="游戏截图1">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点1">
                     <div class="overlay">
-                        <p>镇守：容鸢</p>
+                        <p>俄罗斯贝加尔湖</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/23_b5691a8.jpg?image_process=format,jpg" alt="游戏截图2">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点2">
                     <div class="overlay">
-                        <p>镇守：千夜</p>
+                        <p>北美密歇根湖</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/20_3919d6e.jpg?image_process=format,jpg" alt="游戏截图3">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点3">
                     <div class="overlay">
-                        <p>镇守：叶万山</p>
+                        <p>欧洲多瑙河</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/14_97e6191.jpg?image_process=format,jpg" alt="游戏截图4">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点4">
                     <div class="overlay">
-                        <p>镇守：道主</p>
+                        <p>亚洲湄公河</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/15_6af9e0c.jpg?image_process=format,jpg" alt="游戏截图5">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点5">
                     <div class="overlay">
-                        <p>镇守：蛇郎君</p>
+                        <p>巨型鲶鱼</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/16_591367f.jpg?image_process=format,jpg" alt="游戏截图6">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点6">
                     <div class="overlay">
-                        <p>镇守：皮影</p>
+                        <p>巨型鲈鱼</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/17_3869ae2.jpg?image_process=format,jpg" alt="游戏截图7">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点7">
                     <div class="overlay">
-                        <p>镇守：小十七</p>
+                        <p>巨型鲑鱼</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/18_4d4a64e.jpg?image_process=format,jpg" alt="游戏截图8">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点8">
                     <div class="overlay">
-                        <p>镇守：田英</p>
+                        <p>巨型鳟鱼</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 攻略区 -->
+    <!-- 钓鱼技巧 -->
     <section id="guides" class="guides">
         <div class="container">
             <div class="section-title">
-                <h2>游戏攻略</h2>
+                <h2>钓鱼技巧</h2>
             </div>
             <div class="guides-tabs">
-                <div class="guides-tab active" data-tab="weapons">流派攻略</div>
-                <div class="guides-tab" data-tab="wuqi">武器攻略</div>				
-                <div class="guides-tab" data-tab="equipment">装备攻略</div>
+                <div class="guides-tab active" data-tab="fish">鱼类攻略</div>
+                <div class="guides-tab" data-tab="equipment">装备攻略</div>				
+                <div class="guides-tab" data-tab="locations">钓点攻略</div>
             </div>
             
-            <div id="weapons" class="guides-content active">
+            <div id="fish" class="guides-content active">
                 <div class="guides-grid">
                     <div class="guide-card">
                         <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="流派1">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="鱼类1">
                         </div>
                         <div class="guide-info">
-                            <h3>鸣金·虹（无名剑法 / 无名枪法）</h3>
-                            <p>有较强机动性，和一定的单体控制能力，先手拉扯比较有优势。并在对抗中有耐力博弈优势，配合高额伤害的蓄力技可打出爆发输出。</p>
-							<h3>心法推荐</h3>
-							<p>无名心法、千山法、燎原星火、威猛歌</p></p>
-							<h3>装备推荐</h3>
-							<p>玉斗武器套装、易相防具套装</p>
-							<h3>武库推荐</h3>
-							<p>鸣金</p>
-							<h3>调律推荐</h3>
-							<p>最小外功攻击/最大外功攻击/会意率</p>
+                            <h3>鲶鱼</h3>
+                            <p>鲶鱼是一种常见的淡水鱼类，体型较大，喜欢在水底活动，常出现在河流、湖泊的深水区。</p>
+							<h3>最佳钓点</h3>
+							<p>河流入湖口、桥墩附近、水草丛生的缓流区</p>
+							<h3>最佳饵料</h3>
+							<p>蚯蚓、红虫、鱼肠、蚌肉</p>
+							<h3>钓鱼技巧</h3>
+							<p>使用较重的铅坠，将鱼饵放置在水底，耐心等待鲶鱼上钩。鲶鱼吃饵动作较轻，需要仔细观察浮漂动静。</p>
                         </div>
                     </div>
                     <div class="guide-card">
                         <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="流派2">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="鱼类2">
                         </div>
                         <div class="guide-info">
-                            <h3>鸣金·影（积矩九剑 / 九曲惊神枪）</h3>
-                            <p>通过附加流血异常效果，触发高频次持续伤害结算。并可通过提升自身伤害系数，更快的集中打击目标。同时有一定的机动性。</p>
-							<h3>心法推荐</h3>
-							<p>剑气纵横、逐浪心经、移经易武、凝神章</p>
-							<h3>装备推荐</h3>
-							<p>飞隼武器套装、鹰扬防具套装</p>
-							<h3>武库推荐</h3>
-							<p>鸣金</p>
-							<h3>调律推荐</h3>
-							<p>最小外功攻击/最大外功攻击/会意率</p>
+                            <h3>鲈鱼</h3>
+                            <p>鲈鱼是一种肉质鲜美的鱼类，喜欢在水流较快的区域活动，对水质要求较高。</p>
+							<h3>最佳钓点</h3>
+							<p>河流急弯处、瀑布下游、桥墩迎水面</p>
+							<h3>最佳饵料</h3>
+							<p>小型活鱼、虾仁、仿真鱼饵</p>
+							<h3>钓鱼技巧</h3>
+							<p>使用较轻的装备，抛投到水流中，让饵料随水流自然漂动。鲈鱼喜欢追逐活动的饵料，需要适当提拉鱼竿引诱。</p>
                         </div>
                     </div>
 					<div class="guide-card">
                         <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="流派3">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="鱼类3">
                         </div>
                         <div class="guide-info">
-                            <h3>裂石·威（嗟夫刀法 / 八方风雷枪）</h3>
-                            <p>拥有护盾、减伤和抗打断能力，生存能力较强。并可通过嘲讽能力在团队中承担承伤的定位。可聚怪后使用大范围蓄力技造成群体伤害。</p>
-							<h3>心法推荐</h3>
-							<p>山河绝韵、磐石决、困兽心经、抗造大法</p>
-							<h3>装备推荐</h3>
-							<p>时雨武器套装、桂月防具套装</p>
-							<h3>武库推荐</h3>
-							<p>裂石</p>
-							<h3>调律推荐</h3>
-							<p>气血最大值</p>
+                            <h3>鲑鱼</h3>
+                            <p>鲑鱼是一种洄游性鱼类，通常生活在海洋中，但在繁殖季节会回到淡水河流。</p>
+							<h3>最佳钓点</h3>
+							<p>河流入海口、瀑布上游、水流湍急的河道</p>
+							<h3>最佳饵料</h3>
+							<p>小鱼、虾类、鲑鱼专用鱼饵</p>
+							<h3>钓鱼技巧</h3>
+							<p>使用中等重量的装备，抛投到水流中，让饵料随水流自然漂动。鲑鱼喜欢在水流中层活动，需要适当调整浮漂深度。</p>
                         </div>
                     </div>
 					<div class="guide-card">
                         <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="流派4">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="鱼类4">
                         </div>
                         <div class="guide-info">
-                            <h3>牵丝·玉（青山执笔 / 九重春色）</h3>
-                            <p>远程流派，拥有远程持续输出的能力。也有一定控制能力，配合浮空连击对目标打出爆发伤害。</p>
-							<h3>心法推荐</h3>
-							<p>花上月令、葫芦飞飞、春雷篇、纵地摘星</p>
-							<h3>装备推荐</h3>
-							<p>烟柳武器套装、不知寒防具套装</p>
-							<h3>武库推荐</h3>
-							<p>牵丝</p>
-							<h3>调律推荐</h3>
-							<p>最小外功攻击/最大外功攻击/会心率</p>
-                        </div>
-                    </div>
-					<div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="流派5">
-                        </div>
-                        <div class="guide-info">
-                            <h3>破竹·风（泥犁三垢 / 粟子游尘）</h3>
-                            <p>拥有极强的机动性和高频的连续输出能力，多种手段可以快速拉近与目标的距离，有一定的控制手段保证输出环境。</p>
-							<h3>心法推荐</h3>
-							<p>忘川绝响、心弥泥鱼、断石之构、沧浪剑诀</p>
-							<h3>装备推荐</h3>
-							<p>燕归武器套装、江凝防具套装</p>
-							<h3>武库推荐</h3>
-							<p>破竹</p>
-							<h3>调律推荐</h3>
-							<p>最小外功攻击/最大外功攻击/会心率</p>
-                        </div>
-                    </div>
-					<div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="流派6">
-                        </div>
-                        <div class="guide-info">
-                            <h3>牵丝·霖（明川药典 / 千香引魂蛊）</h3>
-                            <p>拥有爆发性和持续性的治疗技能，兼顾单体和群体的回复手段。复活能力可使重伤的队友重新战斗，以及可为全队提供增伤的辅助效果。</p>
-							<h3>心法推荐</h3>
-							<p>君臣药、千丝蛊、杏花不见、千丝蛊</p>
-							<h3>装备推荐</h3>
-							<p>浣花武器套装、梨雪防具套装</p>
-							<h3>武库推荐</h3>
-							<p>牵丝</p>
-							<h3>调律推荐</h3>
-							<p>最小外功攻击/最大外功攻击/会心率</p>
-                        </div>
-                    </div>
-					<div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="流派7">
-                        </div>
-                        <div class="guide-info">
-                            <h3>破竹·尘（醉梦游春 / 粟子行云）</h3>
-                            <p>拥有多种范围伤害的远程技能，具备位移、聚怪、屏息时间等手段来创造有利的输出环境，在应对多个敌人时能发挥最大的优势。</p>
-							<h3>心法推荐</h3>
-							<p>千营一呼、绳舟行木、灯儿亮、大唐歌</p>
-							<h3>装备推荐</h3>
-							<p>连星武器套装、抱玉防具套装</p>
-							<h3>武库推荐</h3>
-							<p>破竹</p>
-							<h3>调律推荐</h3>
-							<p>最小外功攻击/最大外功攻击/会心率</p>
+                            <h3>鳟鱼</h3>
+                            <p>鳟鱼是一种色彩斑斓的冷水性鱼类，对水质要求极高，通常生活在清澈的山间溪流中。</p>
+							<h3>最佳钓点</h3>
+							<p>山间溪流、瀑布附近、冷泉区域</p>
+							<h3>最佳饵料</h3>
+							<p>蚯蚓、红虫、蝇虫、仿真鱼饵</p>
+							<h3>钓鱼技巧</h3>
+							<p>使用轻型装备，采用飞蝇钓法或浮游钓法。鳟鱼对环境变化敏感，钓鱼时需保持安静，避免惊扰。</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div id="wuqi" class="guides-content">
-                <div class="guides-grid">
-                    <div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/wq/wq2_8ef81ea.png" alt="武器1">
-                        </div>
-                        <div class="guide-info">
-                            <h3>剑</h3>
-                            <p>剑为君子之器，守中庸之道。不偏不倚，无过无不及。轻盈灵动，定天下风尘，周防君子身。</p>
-							<a href="https://nie.v.netease.com/nie/2024/0509/b3ec8cb5683074a41d5762a2aac8c06cqt.mp4" target="_blank" class="btn">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/wq/wq3_5e1ddf9.png" alt="武器2">
-                        </div>
-                        <div class="guide-info">
-                            <h3>枪</h3>
-                            <p>枪之道，攻守兼具。枪之势，不疾不徐。枪之威，扫彻宇内。枪之退，守正不移。</p>
-							<a href="https://yysls.fp.ps.netease.com/file/66dabcac6e321e4bcc209b44GrDDUaeP05" target="_blank" class="btn">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/wq/wq5_c1f6deb.png" alt="武器3">
-                        </div>
-                        <div class="guide-info">
-                            <h3>扇</h3>
-                            <p>挥舞如春霖，招招愈人心。持扇者内气外化，尤擅远攻之道。化气人体，亦可疗愈百骸，医人医已。</p>
-							<a href="https://yysls.fp.ps.netease.com/file/66e409a46d87187ba09d800dl3T2LtGO05" target="_blank" class="btn">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/wq/wq4_56d34a5.png" alt="武器4">
-                        </div>
-                        <div class="guide-info">
-                            <h3>陌刀</h3>
-                            <p>陌刀重而势沉，挥之稍慢。然其威甚巨，可破单枪匹马，亦可横扫八方。他人与之对招，如毗蜉撼树，难断其势也。。</p>
-							<a href="https://yysls.fp.ps.netease.com/file/66e409b43e6585aa6439255fQXBI6kAC05" target="_blank" class="btn">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/wq/wq1_eca7a74.png" alt="武器5">
-                        </div>
-                        <div class="guide-info">
-                            <h3>双刀</h3>
-                            <p>双刀伤敌之距虽短，然攻势甚疾。讲究一瞬制敌，逐个击破。江湖对阵，皆惧匹马战双刀也。</p>
-							<a href="https://nie.v.netease.com/nie/2024/0509/2c62876d68865267604ca327d6d545d1qt.mp4" target="_blank" class="btn">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/wq/wq6_833580a.png" alt="武器6">
-                        </div>
-                        <div class="guide-info">
-                            <h3>伞</h3>
-                            <p>伞为兵器，轻盈写意，见招之时如翩翩起舞，伤人无形。进可攻，退可守，开合之间，飘逸取胜。</p>
-							<a href="https://yysls.fp.ps.netease.com/file/66e40993cce4f725b13cbd4fOk7NbqRd05" target="_blank" class="btn">查看详情</a>
-                        </div>
-                    </div>
-                    <div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/wq/wq7_cf43d42.png" alt="武器7">
-                        </div>
-                        <div class="guide-info">
-                            <h3>绳镖</h3>
-                            <p>绳镖为器，携之轻便，藏之无形，出则如风。远掷如流星赶月，近袭如灵蛇吐信，攻守自如，尽显侠之俊逸。</p>
-							<a href="https://yysls.fp.ps.netease.com/file/67c97c5628532194f25f8a1e4iymzV1T06" target="_blank" class="btn">查看详情</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			
             <div id="equipment" class="guides-content">
                 <div class="guides-grid">
                     <div class="guide-card">
                         <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="装备1">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="装备1">
                         </div>
                         <div class="guide-info">
-                            <h3>玉斗套装</h3>
-                            <p>二件套 ：最大外功攻击 +1<br>四件套 ：武学技释放后可激活玉斗效果：会意伤害提升10%，且对处于控制状态或真气值低于40%的目标，造成的会意伤害额外增加15%，持续8秒。此效果每12秒只能生效一次</p>
-                        </div>
-                        <div class="guide-info">
-                            <h3>易相套装</h3>
-                            <p>二件套 ：外功防御 +1<br>四件套 ：自身释放的护盾持续时间延长2秒。真气高于85%或真气伤害免疫护盾期间，受到的所有气血伤害降低20%</p>
+                            <h3>新手套装</h3>
+                            <p>适合初学者的入门级装备，操作简单，性价比高。包含基础鱼竿、鱼轮、鱼线和简易鱼饵。</p>
+							<a href="#" target="_blank" class="btn">查看详情</a>
                         </div>
                     </div>
                     <div class="guide-card">
                         <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="装备2">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="装备2">
                         </div>
                         <div class="guide-info">
-                            <h3>飞隼套装</h3>
-                            <p>二件套 ：会意率 +0.1%<br>四件套 ：造成的所有伤害触发会意时可获得飞隼效果：外功攻击会提升2%，持续5秒，最多可叠加5层</p>
-                        </div>
-                        <div class="guide-info">
-                            <h3>鹰扬套装</h3>
-                            <p>二件套 ：外功防御 +1<br>四件套 ：每次造成持续伤害或治疗时可给自身添加1层鹰扬效果：受到伤害降低1.2%，持续10秒，最多可叠5层。满层时可以获得一个鹰护效果：10秒内下次受击伤害降低90%（来源是首领时效果减半），此效果每30秒只能触发一次</p>
+                            <h3>进阶套装</h3>
+                            <p>适合有一定经验的玩家，装备性能全面提升，适合多种钓鱼场景。包含中等级别的鱼竿、鱼轮和专业鱼线。</p>
+							<a href="#" target="_blank" class="btn">查看详情</a>
                         </div>
                     </div>
                     <div class="guide-card">
                         <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="装备3">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="装备3">
                         </div>
                         <div class="guide-info">
-                            <h3>时雨套装</h3>
-                            <p>二件套 ：气血最大值 +40<br>四件套 ：造成的所有会心伤害和治疗提升10%，且在自身处于气血护盾状态时额外提升15%</p>
-                        </div>
-						<div class="guide-info">
-                            <h3>桂月套装</h3>
-                            <p>二件套 ：气血最大值 +40<br>四件套 ：防御中被攻击，有30%概率产生一个吸收伤害量为10%气血上限的护盾，持续20秒，如当前已存在护盾，则额外回复2%气血值。此效果每60秒只能生效一次</p>
+                            <h3>专业套装</h3>
+                            <p>为钓鱼高手设计的专业级装备，采用高品质材料制作，性能卓越。适合挑战高级钓点和巨型鱼类。</p>
+							<a href="#" target="_blank" class="btn">查看详情</a>
                         </div>
                     </div>
-					<div class="guide-card">
+                    <div class="guide-card">
                         <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="装备4">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="装备4">
                         </div>
                         <div class="guide-info">
-                            <h3>烟柳套装</h3>
-                            <p>二件套 ：精准率 +0.1%<br>四件套 ：轻击/空中轻击命中后重击/空中重击伤害提升12%，持续15秒；反之亦然，特别的是，重击/空中重击命中后还会使轻击蓄力伤害提升12%</p>
-                        </div>
-						<div class="guide-info">
-                            <h3>不知寒套装</h3>
-                            <p>二件套 ：会意率 +0.2%<br>四件套 ：进入战斗状态后，若保持10秒不受伤害，可立即获得不知寒效果：下次受击伤害和受击后2秒内受到的所有伤害都可以降低40%。不知寒效果在离开战斗状态时会移除</p>
-                        </div>
-                    </div>
-					<div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="装备5">
-                        </div>
-                        <div class="guide-info">
-                            <h3>燕归套装</h3>
-                            <p>二件套 ：最小外功攻击 +1<br>四件套 ：轻击对真气值低于40%的目标造成的外攻伤害增加15%，对气竭目标额外增加5%</p>
-                        </div>
-						<div class="guide-info">
-                            <h3>江凝套装</h3>
-                            <p>二件套 ：外功防御 +1<br>四件套 ：完美闪避敌人有50%的概率回复自身3%最大生命值和10点耐力</p>
-                        </div>
-                    </div>
-					<div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="装备6">
-                        </div>
-                        <div class="guide-info">
-                            <h3>浣花套装</h3>
-                            <p>二件套 ：会心率 +1%<br>四件套 ：满气血状态下有额外5%概率造成会心治疗和会心伤害，且会心治疗和会心伤害效果提升15%</p>
-                        </div>
-						<div class="guide-info">
-                            <h3>梨雪套装</h3>
-                            <p>二件套 ：外功防御 +1<br>四件套 ：当遭受的单次伤害超过最大气血值40%或自身气血值低于20%时，5秒内下次治疗额外为自身治疗25%最大气血值，每60秒最多生效一次</p>
-                        </div>
-                    </div>
-					<div class="guide-card">
-                        <div class="guide-image">
-                            <img src="https://www.yysls.cn/pc/gw/20220815175950/img/downloads/bz/3_32b1b24.jpg?image_process=format,jpg" alt="装备7">
-                        </div>
-                        <div class="guide-info">
-                            <h3>连星套装</h3>
-                            <p>二件套 ：最大外功攻击 +1<br>四件套 ：同时命中不少于2个敌人以及命中首领时，自身获得1层连星效果：5秒内武学技造成的伤害提升3%，最多可叠加5层，每受到1次伤害减少1层，每秒最多叠加2层连星</p>
-                        </div>
-						<div class="guide-info">
-                            <h3>抱玉套装</h3>
-                            <p>二件套 ：气血最大值 +40<br>四件套 ：当1秒内移动距离超过6米，自身获得抱玉效果：5秒内受到的气血伤害和真气伤害降低15%，该效果每20秒只能生效一次</p>
+                            <h3>传奇套装</h3>
+                            <p>游戏中最顶级的装备，全球限量发售，拥有独特的外观和超强的性能。是每一位钓鱼爱好者的终极梦想。</p>
+							<a href="#" target="_blank" class="btn">查看详情</a>
                         </div>
                     </div>
                 </div>
             </div>
 			
+            <div id="locations" class="guides-content">
+                <div class="guides-grid">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点1">
+                        </div>
+                        <div class="guide-info">
+                            <h3>俄罗斯贝加尔湖</h3>
+                            <p>贝加尔湖是世界上最深的湖泊，拥有丰富的冷水鱼类资源。适合全年钓鱼，冬季还可体验独特的冰钓乐趣。</p>
+							<p><strong>推荐鱼类：</strong> 鲑鱼、鳟鱼、白鲑</p>
+							<p><strong>最佳季节：</strong> 全年</p>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点2">
+                        </div>
+                        <div class="guide-info">
+                            <h3>北美密歇根湖</h3>
+                            <p>密歇根湖是美国五大湖之一，水质清澈，鱼类资源丰富。周边设施完善，适合全家出游钓鱼。</p>
+							<p><strong>推荐鱼类：</strong> 鲈鱼、鲑鱼、梭鱼</p>
+							<p><strong>最佳季节：</strong> 春季和秋季</p>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点3">
+                        </div>
+                        <div class="guide-info">
+                            <h3>欧洲多瑙河</h3>
+                            <p>多瑙河是欧洲第二长河，流经多个国家，沿途风景秀丽。适合挑战大型淡水鱼类。</p>
+							<p><strong>推荐鱼类：</strong> 鲶鱼、鲤鱼、草鱼</p>
+							<p><strong>最佳季节：</strong> 春季和夏季</p>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="钓点4">
+                        </div>
+                        <div class="guide-info">
+                            <h3>亚洲湄公河</h3>
+                            <p>湄公河是亚洲最重要的跨国水系，拥有众多巨型淡水鱼类。是钓鱼爱好者的天堂。</p>
+							<p><strong>推荐鱼类：</strong> 巨暹罗鲤、巨型鲶鱼、湄公河巨鲈</p>
+							<p><strong>最佳季节：</strong> 旱季（11月-次年4月）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社区交流 -->
+    <section id="community" class="community">
+        <div class="container">
+            <div class="section-title">
+                <h2>社区交流</h2>
+            </div>
+            <div class="community-grid">
+                <div class="community-card">
+                    <div class="community-image">
+                        <img src="https://wallpaperaccess.com/full/478650.jpg" alt="社区1">
+                    </div>
+                    <div class="community-info">
+                        <h3>官方论坛</h3>
+                        <p>加入官方论坛，与其他钓鱼爱好者交流经验，分享钓鱼成果。</p>
+                        <a href="#" class="btn">前往论坛</a>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <div class="community-image">
+                        <img src="https://wallpaperaccess.com/full/478650.jpg" alt="社区2">
+                    </div>
+                    <div class="community-info">
+                        <h3>钓鱼比赛</h3>
+                        <p>参加定期举办的线上钓鱼比赛，赢取丰厚奖励和荣誉。</p>
+                        <a href="#" class="btn">查看赛程</a>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <div class="community-image">
+                        <img src="https://wallpaperaccess.com/full/478650.jpg" alt="社区3">
+                    </div>
+                    <div class="community-info">
+                        <h3>钓鱼视频</h3>
+                        <p>观看专业钓鱼教程和精彩钓鱼瞬间，提升钓鱼技巧。</p>
+                        <a href="#" class="btn">观看视频</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载中心 -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="section-title">
+                <h2>下载中心</h2>
+            </div>
+            <div class="download-content">
+                <div class="download-text">
+                    <h3>立即下载俄罗斯钓鱼4</h3>
+                    <p>体验最真实的钓鱼模拟游戏，探索世界各地的钓鱼胜地，与全球钓鱼爱好者一起分享钓鱼乐趣。</p>
+                    <p>当前版本：v1.3.0 | 发布日期：2023年10月15日</p>
+                    <p>游戏大小：1.8GB | 适用平台：Windows, Mac, Mobile</p>
+                    <div class="download-buttons">
+                        <a href="#" class="btn">Windows版本</a>
+                        <a href="#" class="btn">Mac版本</a>
+                        <a href="#" class="btn">移动端版本</a>
+                    </div>
+                </div>
+                <div class="download-image">
+                    <img src="https://wallpaperaccess.com/full/478650.jpg" alt="下载游戏">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1255,59 +1327,54 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>九梦</h3>
+                    <h3>俄罗斯钓鱼4</h3>
                     <ul>
                     <li><a href="#home">首页</a></li>
-                    <li><a href="#about">百业介绍</a></li>
-                    <li><a href="#roadmap">百业公告</a></li>
-                    <li><a href="#newbie-guides">萌新指南</a></li>
-                    <li><a href="#news">百业动态</a></li>
-                    <li><a href="#gallery">百业风采</a></li>
-                    <li><a href="#guides">游戏攻略</a></li>
+                    <li><a href="#about">游戏介绍</a></li>
+                    <li><a href="#roadmap">更新日志</a></li>
+                    <li><a href="#newbie-guides">新手指南</a></li>
+                    <li><a href="#news">钓鱼资讯</a></li>
+                    <li><a href="#gallery">钓点分享</a></li>
+                    <li><a href="#guides">钓鱼技巧</a></li>
+                    <li><a href="#community">社区交流</a></li>
+                    <li><a href="#download">下载中心</a></li>
                     <li><a href="#contact">联系我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>皇宸</h3>
-                <ul>
-                    <li><a href="https://hc.ihcking.com">皇宸总部</a></li>
-                    <li><a href="https://hcbl.ihcking.com">皇宸部落</a></li>
-                    <li><a href="https://qlgh.ihcking.com">乾龙公会</a></li>
-                    <li><a href="https://qcjz.ihcking.com">卿城家族</a></li>
-                    <li><a href="https://fgsm.ihcking.com">枫谷师门</a></li>
-                    <li><a href="https://xf.ihcking.com">潇府</a></li>
-                    <li><a href="https://yg.ihcking.com">逸阁</a></li>
-                    <li><a href="https://qg.ihcking.com">卿阁</a></li>
-                    <li><a href="https://fg.ihcking.com">枫阁</a></li>
-                </ul>
-                </div>
-				<div class="footer-column">
-                    <h3>燕云十六声</h3>
+                    <h3>游戏资源</h3>
                     <ul>
-                        <li><a href="https://www.yysls.cn/index.html" target="_blank">游戏官网</a></li>
-                        <li><a href="https://www.yysls.cn/news/index.html" target="_blank">新闻资讯</a></li>
-                        <li><a href="https://16.163.com/map/" target="_blank">燕云地图</a></li>
-                        <li><a href="https://www.yysls.cn/faq/" target="_blank">常见问题</a></li>
+                        <li><a href="#">游戏下载</a></li>
+                        <li><a href="#">更新日志</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">钓鱼教程</a></li>
+                        <li><a href="#">鱼类图鉴</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>社区互动</h3>
+                    <ul>
+                        <li><a href="#">官方论坛</a></li>
+                        <li><a href="#">钓鱼比赛</a></li>
+                        <li><a href="#">钓鱼视频</a></li>
+                        <li><a href="#">成就展示</a></li>
+                        <li><a href="#">玩家社区</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>联系我们</h3>
                     <ul>
-                        <li><a href="#"><i class="fab fa-qq"></i> 3010662388</a></li>
-						<li><a href="#"><i class="fab fa-weixin"></i> 3010662388</a></li>
-                        <li><a href="#">📧 hc@ihcking.com</a></li>
+                        <li><a href="#"><i class="fab fa-qq"></i> fishing@example.com</a></li>
+                        <li><a href="#"><i class="fab fa-weixin"></i> fishing_club</a></li>
+                        <li><a href="#">📧 info@russianfishing.com</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                 <h3>关注我们</h3>
                 <div class="wechat-qrcode">
                     <div class="wechat-qrcode-item">
-                        <img src="../.././assets/img/xfdyh.jpg" alt="微信公众号1">
-                        <p>皇宸订阅号</p>
-                    </div>
-                    <div class="wechat-qrcode-item">
-                        <img src="../.././assets/img/hcwfh.jpg" alt="微信公众号2">
-                        <p>皇宸服务号</p>
+                        <img src="placeholder.jpg" alt="微信公众号">
+                        <p>钓鱼俱乐部</p>
                     </div>
                 </div>
                 <div class="social-platforms">
@@ -1323,7 +1390,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 燕云十六声·九梦. 保留所有权利.</p>
+                <p>&copy; 2023 俄罗斯钓鱼4. 保留所有权利.</p>
             </div>
         </div>
     </footer>
@@ -1385,6 +1452,27 @@
                     // 添加active类到当前选项卡和内容
                     tab.classList.add('active');
                     document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // 返回顶部按钮
+            const backToTopButton = document.createElement('button');
+            backToTopButton.classList.add('back-to-top');
+            backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            document.body.appendChild(backToTopButton);
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
             });
         });
