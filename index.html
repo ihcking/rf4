@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯钓鱼4·X - 钓鱼爱好者的天堂！</title>
+    <!-- 网站描述 -->
+    <meta name="description" content="俄罗斯钓鱼4，最真实的钓鱼模拟游戏，探索世界各地的钓鱼胜地，体验钓鱼的乐趣和挑战。">
+    <!-- 网站关键词 -->
+    <meta name="keywords" content="俄罗斯钓鱼4, 钓鱼模拟, 休闲游戏, 钓鱼攻略, 钓鱼社区, 钓鱼技巧">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+        }
+
+        :root {
+            --primary-color: #8e2de2; /* 紫色 */
+            --secondary-color: #4a00e0; /* 深紫色 */
+            --accent-color: #e94057; /* 红色 */
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --gradient-bg: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--gradient-bg);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(142, 45, 226, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(142, 45, 226, 0.6);
+        }
+
+        /* 导航栏 */
+        header {
+            background-color: rgba(26, 26, 46, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-bg);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* 英雄区域 */
+        .hero {
+            height: 100vh;
+            background: var(--gradient-bg);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('http://rf4game.com/wp-content/uploads/2019/04/belaya_01.jpg') center/cover;
+            opacity: 0.9;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 800px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* 游戏介绍 */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gradient-bg);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* 萌新指南 */
+        #newbie-guides {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        #newbie-guides .about-content {
+            margin-bottom: 50px;
+        }
+
+        /* 最新动态 */
+        .news {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover .news-image img {
+            transform: scale(1.1);
+        }
+
+        .news-info {
+            padding: 20px;
+        }
+
+        .news-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .news-info .news-date {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .news-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* 游戏风采 */
+        .gallery {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item .overlay p {
+            color: white;
+            text-align: center;
+            padding: 0 15px;
+            font-size: 18px;
+            font-weight: 500;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay p {
+            transform: translateY(0);
+        }
+
+        /* 攻略区 */
+        .guides {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+
+        .guides-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .guides-tab {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .guides-tab.active, .guides-tab:hover {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .guides-content {
+            display: none;
+        }
+
+        .guides-content.active {
+            display: block;
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .guide-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .guide-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .guide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .guide-info {
+            padding: 20px;
+        }
+
+        .guide-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .guide-info .guide-category {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .guide-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* 未来计划 */
+        .roadmap {
+            padding: 100px 0;
+            background-color: #f9f9f9;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .roadmap-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .roadmap-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .roadmap-header {
+            background: var(--gradient-bg);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .roadmap-header h3 {
+            font-size: 22px;
+        }
+
+        .roadmap-content {
+            padding: 20px;
+        }
+
+        .roadmap-content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .roadmap-content ul {
+            list-style-position: inside;
+            color: #666;
+        }
+
+        .roadmap-content li {
+            margin-bottom: 8px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--gradient-bg);
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #aaa;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--gradient-bg);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* 微信公众号二维码 */
+        .wechat-qrcode {
+            display: flex;
+            gap: 20px;
+        }
+
+        .wechat-qrcode-item {
+            text-align: center;
+            width: 120px; /* 设置容器为正方形 */
+        }
+
+        .wechat-qrcode-item img {
+            width: 120px; /* 设置二维码为正方形 */
+            height: 120px; /* 设置二维码为正方形 */
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* 媒体平台图标 */
+        .social-platforms {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-platforms a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-platforms a:hover {
+            background: var(--gradient-bg);
+            transform: translateY(-3px);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .guides-tabs {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+            opacity: 0;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQxIDAtOC0zLjU5LTgtOHMzLjU5LTggOC04IDggMy41OSA4IDgtMy41OSA4LTggMy41OSA4LTggOHptMy41LTljLjgzIDAgMS41LS42NyAxLjUtMS41UzE2LjMzIDggMTUuNSA4IDE0IDguNjcgMTQgOC41IDE0LjUgOSAxNS41IDkgNVMyLjUgMS41IDEuNSAxLjV6Ii8+PC9zdmc+" alt="Logo">
+                    <h1>俄罗斯钓鱼4·X</h1>
+                </div>
+                <ul class="nav-links">					
+					<li><a href="#home">首页</a></li>
+                    <li><a href="#about">游戏介绍</a></li>
+                    <li><a href="#roadmap">更新日志</a></li>
+                    <li><a href="#newbie-guides">萌新指南</a></li>
+                    <li><a href="#news">钓鱼资讯</a></li>
+                    <li><a href="#gallery">游戏风采</a></li>
+                    <li><a href="#guides">钓鱼技巧</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="fade-in">俄罗斯钓鱼4 - 钓鱼爱好者的天堂！</h2>
+                <p class="fade-in delay-1">体验最真实的钓鱼模拟游戏，探索世界各地的钓鱼胜地，与全球钓鱼爱好者分享钓鱼乐趣。</p>
+                <div class="hero-buttons fade-in delay-2">
+                    <a href="https://rf4game.com/" target="_blank" class="btn">立即下载</a>
+                    <a href="#about" class="btn btn-secondary">了解更多</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏介绍 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>游戏介绍</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="http://rf4game.com/wp-content/uploads/2022/10/gameplay05.jpg" alt="游戏介绍">
+                </div>
+                <div class="about-text">
+                    <h3>俄罗斯钓鱼4</h3>
+                    <p>俄罗斯钓鱼4是一款由俄罗斯游戏公司开发的休闲钓鱼模拟游戏，自2018年发布以来，凭借其真实的钓鱼体验、丰富的鱼类品种、精美的游戏画面和逼真的物理引擎，吸引了全球数百万钓鱼爱好者的关注。</p>
+                    <p>游戏中，玩家可以探索世界各地的钓鱼胜地，从宁静的湖泊到湍急的河流，从神秘的沼泽地到广阔的海洋，每一个场景都经过精心设计，带来身临其境的钓鱼体验。同时，游戏中还提供了丰富的装备选购，从入门级的鱼竿到专业的渔具，满足不同玩家的需求。</p>
+                    <p>无论您是钓鱼新手还是资深渔夫，俄罗斯钓鱼4都能为您提供无穷的乐趣和挑战。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 未来计划 -->
+    <section id="roadmap" class="roadmap">
+        <div class="container">
+            <div class="section-title">
+                <h2>更新日志</h2>
+            </div>
+            <div class="roadmap-grid">
+                <div class="roadmap-card">
+                    <div class="roadmap-header">
+                        <h3>1.3.0版本</h3>
+                    </div>
+                    <div class="roadmap-content">
+                        <p>2023年10月15日发布</p>
+                        <ul>
+                            <li>新增亚洲钓鱼地图，包括中国、日本和韩国的经典钓点</li>
+                            <li>增加30种新鱼类，包括多种亚洲特有鱼类</li>
+                            <li>新增钓鱼教程系统，帮助新手快速上手</li>
+                            <li>优化游戏性能，修复部分已知bug</li>
+                            <li>新增鱼类百科功能，记录已捕获鱼类信息</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-card">
+                    <div class="roadmap-header">
+                        <h3>1.2.0版本</h3>
+                    </div>
+                    <div class="roadmap-content">
+                        <p>2023年6月20日发布</p>
+                        <ul>
+                            <li>新增欧洲钓鱼地图，包括多瑙河、莱茵河等著名水域</li>
+                            <li>增加15种新型鱼类，包括欧洲鳟鱼、鲤鱼等</li>
+                            <li>新增季节变化系统，不同季节鱼类行为和分布不同</li>
+                            <li>新增成就系统，完成特定任务获得成就和奖励</li>
+                            <li>优化天气系统，增加雨天、雪天等特殊天气效果</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="roadmap-card">
+                    <div class="roadmap-header">
+                        <h3>1.1.0版本</h3>
+                    </div>
+                    <div class="roadmap-content">
+                        <p>2023年3月5日发布</p>
+                        <ul>
+                            <li>新增北美钓鱼地图，包括密歇根湖、五大湖等著名水域</li>
+                            <li>增加10种新型鱼类，包括鲈鱼、鲑鱼等</li>
+                            <li>新增鱼类习性系统，不同鱼类对饵料和环境的偏好不同</li>
+                            <li>优化物理引擎，钓鱼动作更加真实自然</li>
+                            <li>新增鱼类图鉴功能，记录已捕获鱼类信息</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 萌新指南 -->
+<section id="newbie-guides" class="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>萌新指南</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="http://rf4game.com/wp-content/uploads/2022/10/gameplay07.jpg" alt="新人指南">
+            </div>
+            <div class="about-text">
+                <h3>新人指南</h3>
+                <p>欢迎来到俄罗斯钓鱼4！这里是为新手钓手准备的入门指南。</p>
+                <p>1. <strong>新手教程</strong>：完成新手教程可获得丰厚奖励，帮助你快速了解游戏基础操作。</p>
+                <p>2. <strong>渔具选择</strong>：根据个人喜好选择适合的渔具，包括鱼竿、鱼线、鱼钩等，每个渔具都有独特的优势和玩法。</p>
+                <p>3. <strong>任务系统</strong>：完成游戏任务可获得经验、金币和装备等奖励，助力快速成长。</p>
+                <p>4. <strong>探索水域</strong>：每一个水域都需要仔细探索和发现，不仅能获得丰厚奖励，还可以提升属性。</p>
+            </div>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="http://rf4game.com/wp-content/uploads/2022/10/gameplay08.jpg" alt="进阶指南">
+            </div>
+            <div class="about-text">
+                <h3>进阶指南</h3>
+                <p>掌握基础后，进阶指南将帮助你更深入地了解游戏。</p>
+                <p>1. <strong>装备升级</strong>：通过装备升级提升装备属性，增强角色战斗力。</p>
+                <p>2. <strong>饵料搭配</strong>：根据不同鱼种和环境选择合适的饵料组合，发挥最大钓鱼效能。</p>
+                <p>3. <strong>技能提升</strong>：学习高级钓鱼技巧，提升技能等级，提高钓鱼成功率。</p>
+                <p>4. <strong>成就系统</strong>：通过钓鱼和探索提高成就值，增加特殊奖励。</p>
+            </div>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="http://rf4game.com/wp-content/uploads/2022/10/komarinoe03.jpg" alt="多人指南">
+            </div>
+            <div class="about-text">
+                <h3>多人指南</h3>
+                <p>欢迎来到多人模式！这里是为新手钓手准备的多人模式指南。</p>
+                <p>1. <strong>社交系统</strong>：根据兴趣加入不同的钓鱼社区，帮助你快速融入多人游戏环境。</p>
+                <p>2. <strong>团队钓鱼</strong>：通过组队钓鱼获取更多奖励，提升辅助属性和团队Buff。</p>
+                <p>3. <strong>休闲模式</strong>：可以与大家一起参与休闲钓鱼活动，结交志同道合的朋友。</p>
+                <p>4. <strong>竞技模式</strong>：与对手进行钓鱼竞技比赛，获得丰厚奖励，快速提升排名。</p>
+            </div>
+        </div>
+    </div>
+</section>
+	
+    <!-- 最新动态 -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>钓鱼资讯</h2>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="http://rf4game.com/wp-content/uploads/2019/04/ahtuba_06.jpg" alt="资讯1">
+                    </div>
+                    <div class="news-info">
+                        <span class="news-date">2023年10月15日</span>
+                        <h3>俄罗斯钓鱼4 v1.3.0版本更新内容</h3>
+                        <p>新增亚洲钓鱼地图，增加30种新鱼类，优化游戏性能。</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="http://rf4game.com/wp-content/uploads/2019/04/belaya_02.jpg" alt="资讯2">
+                    </div>
+                    <div class="news-info">
+                        <span class="news-date">2023年9月20日</span>
+                        <h3>全球钓鱼比赛即将开启</h3>
+                        <p>第四届全球钓鱼比赛将于10月1日正式开始，丰厚奖金等你来拿。</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="http://rf4game.com/wp-content/uploads/2019/04/belaya_03.jpg" alt="资讯3">
+                    </div>
+                    <div class="news-info">
+                        <span class="news-date">2023年8月5日</span>
+                        <h3>新增游戏内购买系统</h3>
+                        <p>游戏内新增购买系统，玩家可以购买高级装备和特殊鱼饵。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏风采 -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>游戏风采</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="http://rf4game.com/wp-content/uploads/2022/10/kuori02.jpg" alt="游戏截图1">
+                    <div class="overlay">
+                        <p>水塘</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska03.jpg" alt="游戏截图2">
+                    <div class="overlay">
+                        <p>水塘</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="http://rf4game.com/wp-content/uploads/2019/04/ahtuba_02.jpg" alt="游戏截图3">
+                    <div class="overlay">
+                        <p>水塘</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="http://rf4game.com/wp-content/uploads/2019/04/ahtuba_04.jpg" alt="游戏截图4">
+                    <div class="overlay">
+                        <p>水塘</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="http://rf4game.com/wp-content/uploads/2019/04/ahtuba_05.jpg" alt="游戏截图5">
+                    <div class="overlay">
+                        <p>水塘</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="http://rf4game.com/wp-content/uploads/2022/10/kuori04.jpg" alt="游戏截图6">
+                    <div class="overlay">
+                        <p>水塘</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="http://rf4game.com/wp-content/uploads/2019/04/ahtuba_01.jpg" alt="游戏截图7">
+                    <div class="overlay">
+                        <p>水塘</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="http://rf4game.com/wp-content/uploads/2019/04/ahtuba_03.jpg" alt="游戏截图8">
+                    <div class="overlay">
+                        <p>水塘</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 攻略区 -->
+    <section id="guides" class="guides">
+        <div class="container">
+            <div class="section-title">
+                <h2>钓鱼技巧</h2>
+            </div>
+            <div class="guides-tabs">
+                <div class="guides-tab active" data-tab="fish">鱼类攻略</div>
+                <div class="guides-tab" data-tab="equipment">装备攻略</div>				
+                <div class="guides-tab" data-tab="locations">钓点攻略</div>
+            </div>
+            
+            <div id="fish" class="guides-content active">
+                <div class="guides-grid">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="鱼类1">
+                        </div>
+                        <div class="guide-info">
+                            <h3>鲶鱼</h3>
+                            <p>鲶鱼是一种常见的淡水鱼类，体型较大，喜欢在水底活动，常出现在河流、湖泊的深水区。</p>
+							<h3>最佳钓点</h3>
+							<p>河流入湖口、桥墩附近、水草丛生的缓流区</p>
+							<h3>最佳饵料</h3>
+							<p>蚯蚓、红虫、鱼肠、蚌肉</p>
+							<h3>钓鱼技巧</h3>
+							<p>使用较重的铅坠，将鱼饵放置在水底，耐心等待鲶鱼上钩。鲶鱼吃饵动作较轻，需要仔细观察浮漂动静。</p>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="鱼类2">
+                        </div>
+                        <div class="guide-info">
+                            <h3>鲈鱼</h3>
+                            <p>鲈鱼是一种肉质鲜美的鱼类，喜欢在水流较快的区域活动，对水质要求较高。</p>
+							<h3>最佳钓点</h3>
+							<p>河流急弯处、瀑布下游、桥墩迎水面</p>
+							<h3>最佳饵料</h3>
+							<p>小型活鱼、虾仁、仿真鱼饵</p>
+							<h3>钓鱼技巧</h3>
+							<p>使用较轻的装备，抛投到水流中，让饵料随水流自然漂动。鲈鱼喜欢追逐活动的饵料，需要适当提拉鱼竿引诱。</p>
+                        </div>
+                    </div>
+					<div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="鱼类3">
+                        </div>
+                        <div class="guide-info">
+                            <h3>鲑鱼</h3>
+                            <p>鲑鱼是一种洄游性鱼类，通常生活在海洋中，但在繁殖季节会回到淡水河流。</p>
+							<h3>最佳钓点</h3>
+							<p>河流入海口、瀑布上游、水流湍急的河道</p>
+							<h3>最佳饵料</h3>
+							<p>小鱼、虾类、鲑鱼专用鱼饵</p>
+							<h3>钓鱼技巧</h3>
+							<p>使用中等重量的装备，抛投到水流中，让饵料随水流自然漂动。鲑鱼喜欢在水流中层活动，需要适当调整浮漂深度。</p>
+                        </div>
+                    </div>
+					<div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="鱼类4">
+                        </div>
+                        <div class="guide-info">
+                            <h3>鳟鱼</h3>
+                            <p>鳟鱼是一种色彩斑斓的冷水性鱼类，对水质要求极高，通常生活在清澈的山间溪流中。</p>
+							<h3>最佳钓点</h3>
+							<p>山间溪流、瀑布附近、冷泉区域</p>
+							<h3>最佳饵料</h3>
+							<p>蚯蚓、红虫、蝇虫、仿真鱼饵</p>
+							<h3>钓鱼技巧</h3>
+							<p>使用轻型装备，采用飞蝇钓法或浮游钓法。鳟鱼对环境变化敏感，钓鱼时需保持安静，避免惊扰。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="equipment" class="guides-content">
+                <div class="guides-grid">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="装备1">
+                        </div>
+                        <div class="guide-info">
+                            <h3>新手套装</h3>
+                            <p>适合初学者的入门级装备，操作简单，性价比高。包含基础鱼竿、鱼轮、鱼线和简易鱼饵。</p>
+							<a href="#" target="_blank" class="btn">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="https://wallpaperaccess.com/full/478650.jpg" alt="装备2">
+                        </div>
+                        <div class="guide-info">
+                            <h3>进阶套装</h3>
+                            <p>适合有一定经验的玩家，装备性能全面提升，适合多种钓鱼场景。包含中等级别的鱼竿、鱼轮和专业鱼线。</p>
+							<a href="#" target="_blank" class="btn">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="装备3">
+                        </div>
+                        <div class="guide-info">
+                            <h3>专业套装</h3>
+                            <p>为钓鱼高手设计的专业级装备，采用高品质材料制作，性能卓越。适合挑战高级钓点和巨型鱼类。</p>
+							<a href="#" target="_blank" class="btn">查看详情</a>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="装备4">
+                        </div>
+                        <div class="guide-info">
+                            <h3>传奇套装</h3>
+                            <p>游戏中最顶级的装备，全球限量发售，拥有独特的外观和超强的性能。是每一位钓鱼爱好者的终极梦想。</p>
+							<a href="#" target="_blank" class="btn">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+            <div id="locations" class="guides-content">
+                <div class="guides-grid">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="钓点1">
+                        </div>
+                        <div class="guide-info">
+                            <h3>俄罗斯贝加尔湖</h3>
+                            <p>贝加尔湖是世界上最深的湖泊，拥有丰富的冷水鱼类资源。适合全年钓鱼，冬季还可体验独特的冰钓乐趣。</p>
+							<p><strong>推荐鱼类：</strong> 鲑鱼、鳟鱼、白鲑</p>
+							<p><strong>最佳季节：</strong> 全年</p>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="钓点2">
+                        </div>
+                        <div class="guide-info">
+                            <h3>北美密歇根湖</h3>
+                            <p>密歇根湖是美国五大湖之一，水质清澈，鱼类资源丰富。周边设施完善，适合全家出游钓鱼。</p>
+							<p><strong>推荐鱼类：</strong> 鲈鱼、鲑鱼、梭鱼</p>
+							<p><strong>最佳季节：</strong> 春季和秋季</p>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="钓点3">
+                        </div>
+                        <div class="guide-info">
+                            <h3>欧洲多瑙河</h3>
+                            <p>多瑙河是欧洲第二长河，流经多个国家，沿途风景秀丽。适合挑战大型淡水鱼类。</p>
+							<p><strong>推荐鱼类：</strong> 鲶鱼、鲤鱼、草鱼</p>
+							<p><strong>最佳季节：</strong> 春季和夏季</p>
+                        </div>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <img src="http://rf4game.com/wp-content/uploads/2022/10/tunguska02.jpg" alt="钓点4">
+                        </div>
+                        <div class="guide-info">
+                            <h3>亚洲湄公河</h3>
+                            <p>湄公河是亚洲最重要的跨国水系，拥有众多巨型淡水鱼类。是钓鱼爱好者的天堂。</p>
+							<p><strong>推荐鱼类：</strong> 巨暹罗鲤、巨型鲶鱼、湄公河巨鲈</p>
+							<p><strong>最佳季节：</strong> 旱季（11月-次年4月）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>俄罗斯钓鱼4·X</h3>
+                    <ul>
+					<li><a href="#home">首页</a></li>
+                    <li><a href="#about">游戏介绍</a></li>
+                    <li><a href="#roadmap">更新日志</a></li>
+                    <li><a href="#newbie-guides">萌新指南</a></li>
+                    <li><a href="#news">钓鱼资讯</a></li>
+                    <li><a href="#gallery">游戏风采</a></li>
+                    <li><a href="#guides">钓鱼技巧</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>皇宸</h3>
+                <ul>
+                    <li><a href="https://hc.ihcking.com">皇宸总部</a></li>
+                    <li><a href="https://hcbl.ihcking.com">皇宸部落</a></li>
+                    <li><a href="https://qlgh.ihcking.com">乾龙公会</a></li>
+                    <li><a href="https://qcjz.ihcking.com">卿城家族</a></li>
+                    <li><a href="https://fgsm.ihcking.com">枫谷师门</a></li>
+                    <li><a href="https://xf.ihcking.com">潇府</a></li>
+                    <li><a href="https://yg.ihcking.com">逸阁</a></li>
+                    <li><a href="https://qg.ihcking.com">卿阁</a></li>
+                    <li><a href="https://fg.ihcking.com">枫阁</a></li>
+                </ul>
+                </div>
+				<div class="footer-column">
+                    <h3>俄罗斯钓鱼4</h3>
+                    <ul>
+                        <li><a href="http://rf4game.com" target="_blank">游戏官网</a></li>
+                        <li><a href="http://rf4game.com/cn/news/" target="_blank">新闻资讯</a></li>
+                        <li><a href="http://rf4game.com/cn/records/" target="_blank">排行榜</a></li>
+                        <li><a href="https://rf4game.com/forumcn/" target="_blank">社区论坛</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-qq"></i> 3010662388</a></li>
+						<li><a href="#"><i class="fab fa-weixin"></i> 3010662388</a></li>
+                        <li><a href="#">📧 hc@ihcking.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                <h3>关注我们</h3>
+                <div class="wechat-qrcode">
+                    <div class="wechat-qrcode-item">
+                        <img src="../.././assets/img/xfdyh.jpg" alt="微信公众号1">
+                        <p>皇宸订阅号</p>
+                    </div>
+                    <div class="wechat-qrcode-item">
+                        <img src="../.././assets/img/hcwfh.jpg" alt="微信公众号2">
+                        <p>皇宸服务号</p>
+                    </div>
+                </div>
+                <div class="social-platforms">
+                    <a href="#" title="哔哩哔哩"><i class="fab fa-bilibili"></i>
+                    </a>
+                    <a href="#" title="微博"><i class="fab fa-weibo"></i>
+                    </a>
+                    <a href="#" title="抖音"><i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="#" title="QQ群"><i class="fab fa-qq"></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 俄罗斯钓鱼4·X. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 滚动动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // 导航栏滚动效果
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.style.backgroundColor = 'rgba(26, 26, 46, 0.95)';
+                    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.2)';
+                } else {
+                    header.style.backgroundColor = 'rgba(26, 26, 46, 0.9)';
+                    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                }
+            });
+            
+            // 攻略区选项卡切换
+            const tabs = document.querySelectorAll('.guides-tab');
+            const contents = document.querySelectorAll('.guides-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabId = tab.getAttribute('data-tab');
+                    
+                    // 移除所有active类
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    
+                    // 添加active类到当前选项卡和内容
+                    tab.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
